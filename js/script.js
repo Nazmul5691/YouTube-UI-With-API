@@ -110,7 +110,7 @@ const noDataContainer = async (categoryId) => {
     if (data.data.length === 0) {    
         const div = document.createElement("div");
         div.innerHTML =`
-            <img class="" src="image/icon.png">
+            <img class="" src="image/Icon.png">
             <p class="text-xl">Oops! No Data Found</p>
         `;
 
