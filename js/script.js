@@ -93,6 +93,11 @@ const handleLoadVideos = async(categoryId) => {
     
 }
 
+
+handleLoadVideos("1000");
+
+handleCategory();
+
 // const convertTime = videos.others.posted_date;
 //         const time =(convertTime)=>{
             
@@ -133,7 +138,5 @@ const handleLoadVideos = async(categoryId) => {
 
 
 
-handleLoadVideos("1000");
 
-handleCategory();
 
