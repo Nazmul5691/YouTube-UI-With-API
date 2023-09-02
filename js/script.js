@@ -30,6 +30,15 @@ const handleLoadVideos = async(categoryId) => {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
 
+
+    const noData = document.getElementById('no-data');
+    if (data.data.length === 0) {
+        noData.classList.remove('hidden');
+    } else {
+        noData.classList.add('hidden');
+    }
+
+
     data.data?.forEach((videos) =>{
         const div = document.createElement("div")
         div.innerHTML = `
@@ -101,26 +110,9 @@ const handleLoadVideos = async(categoryId) => {
 
 
 
-const noDataContainer = async (categoryId) => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
-    const data = await res.json();
-    const noDataContainer = document.getElementById("no-data-container");
-    noDataContainer.innerHTML = "";
 
-    if (data.data.length === 0) {    
-        const div = document.createElement("div");
-        div.innerHTML =`
-            <img class="" src="image/Icon.png">
-            <p class="text-xl">Oops! No Data Found</p>
-        `;
 
-        noDataContainer.appendChild(div);
-    }
-    else{
 
-    }
-}
-noDataContainer();
 
 // const sortView = () =>{
 //     data.data.sort((a,b) => b.others.views - a.others.views)

@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <!-- tailwind and daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>hello  this is blog page</h1>
+    <div>
+        <h1 class="text-center text-4xl mt-10">Welcome to Blog page</h1>
+        <hr class="w-96 mx-auto mt-2 h-3 border-gray-800">
+    </div>
+
+    <div class="ml-10">
+        <p class="text-2xl font-bold"># Discuss the scope of var, let, and const</p>
+        <p class="text-xl">1. Variables declared with the var keyword have function scope or global scope, depending on where they are declared.</p>
+        <p class="text-xl">2. Variables declared with the let keyword have block scope, which means they are accessible only within the block, statement, or curly braces {} in which they are defined. </p>
+        <p class="text-xl">3. Variables declared with the const keyword have block scope, just like variables declared with let. </p>
+    </div>
 </body>
 </html>
